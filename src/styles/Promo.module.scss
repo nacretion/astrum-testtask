@@ -1,0 +1,239 @@
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  @extend .flexColumn;
+  z-index: 2;
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  justify-content: space-between;
+  padding: 48px 0;
+}
+
+
+.media {
+  @extend .flexColumn;
+}
+
+.boxes {
+  margin-left: -2vw;
+  width: 72vmin;
+}
+
+.text {
+  @extend .flexColumn;
+  gap: 24px;
+}
+
+
+p, .heading {
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.vito {
+  width: 800px;
+  height: 800px;
+  position: relative;
+  margin-left: -4vw;
+  background-image: url("../img/section1/vito.png"), url("../img/section1/ellipse.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section0 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url('../img/section0/mafiaCostume2.png'),
+  url('../img/section0/mafiaCostume3.png'),
+  url('../img/section0/Hue_Saturation5_1.png');
+  background-size: 74vmin, 80vmin, cover;
+  background-position: left bottom, right bottom, center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 -50px 200px 50px #00000080, inset 0 -100px 500px 100px #2f0a02;
+
+  p {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  .logo {
+    width: 376px;
+  }
+
+  .heading {
+    font-size: 42px;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  &:before {
+    content: "";
+    z-index: 1;
+    left: 4vw;
+    top: 0;
+    position: absolute;
+    width: calc(100% - 4vw);
+    height: 100vh;
+
+    background-image: url('../img/section0/glow.png'), url('../img/section0/blueGlow3.png');
+    background-size: cover, contain;
+    background-repeat: no-repeat;
+    background-position: center, bottom;
+    mix-blend-mode: screen;
+  }
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 0;
+  height: 108vh;
+
+  background-image: url("../img/section1/backgroundWall.png"), url("../img/section1/glow.png");
+
+  background-position: center, bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .heading {
+    font-size: 30px;
+    color: #416DF4;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+}
+
+.container {
+  @extend .flexColumn;
+
+  margin-left: -4vw;
+  height: 100%;
+  width: 632px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.containerHeading {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 16px;
+  margin-bottom: 10px;
+
+  p {
+    border: 1px solid rgba(103, 29, 0, 0.48);
+    background: rgba(0, 0, 0, 0.55);
+    color: #671D00;
+    width: 140px;
+    font-size: 12px;
+  }
+}
+
+.containerItems {
+
+  width: 100%;
+  @extend .flexColumn;
+
+  gap: 1px;
+
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.containerItem {
+  padding: 5px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    width: 135px;
+    text-align: center;
+  }
+
+  h3 {
+    @extend p;
+
+    text-align: left;
+    width: 232px;
+    height: fit-content;
+  }
+  .item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  border-radius: 1px;
+  border: 1px solid rgba(103, 29, 0, 0.48);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.buy {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  .vitoSmall {
+    width: 200px;
+  }
+}
+.buyout {
+  @extend .flexColumn;
+  margin-bottom: 24px;
+  align-items: flex-start;
+
+  p {
+    font-size: 50px;
+  }
+  .button {
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    border-radius: 7px;
+    background: #FCFF00;
+
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .section0:before {
+    left: 0;
+    width: 100%;
+  }
+  .section1 {
+    flex-direction: column;
+    .container {
+      width: 80%;
+      h3 {
+        width: 100px;
+        font-size: 12px;
+      }
+      align-items: center;
+    }
+  }
+}

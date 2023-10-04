@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000;
+}
+
+/* Стилизация полосы прокрутки */
+::-webkit-scrollbar {
+  width: 8px; /* Ширина полосы прокрутки */
+}
+
+/* Стилизация ползунка (бегунка) полосы прокрутки */
+::-webkit-scrollbar-thumb {
+  background-color: #2f0a02; /* Цвет ползунка */
+  border-radius: 6px; /* Скругление углов ползунка */
+}
